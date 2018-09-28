@@ -14,13 +14,7 @@ import org.springframework.stereotype.Repository;
 public interface IVehicleProfileInfoDao extends JpaRepository<VehicleProfileInfo, String> {
 
 
-    @Query("from VehicleProfileInfo where iccid = :iccid")
-    VehicleProfileInfo findByIccid(@Param("iccid") String iccid);
-
     @Query("from VehicleProfileInfo where vin = :vin")
     VehicleProfileInfo findByVin(@Param("vin") String vin);
-
-    @Query("from VehicleProfileInfo where msisdn = :msisdn")
-    VehicleProfileInfo findByMsisdn(@Param("msisdn") String msisdn);
 
 }

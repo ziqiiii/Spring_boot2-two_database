@@ -21,21 +21,13 @@ public class VehicleProfileInfo {
     @Column(name = "vin", nullable = false)
     private String vin;
 
-    @Column(name = "iccid")
-    private String iccid;
-
-    @Column(name = "msisdn")
-    private String msisdn;
-
     public  VehicleProfileInfo(){
 
     }
 
-    public VehicleProfileInfo(String vehicleId,String vin, String iccid, String msisdn){
+    public VehicleProfileInfo(String vehicleId,String vin){
         this.id = vehicleId;
         this.vin = vin;
-        this.iccid = iccid;
-        this.msisdn = msisdn;
     }
 
     public String getId() {
@@ -54,29 +46,12 @@ public class VehicleProfileInfo {
         this.vin = vin;
     }
 
-    public String getIccid() {
-        return iccid;
-    }
-
-    public void setIccid(String iccid) {
-        this.iccid = iccid;
-    }
-
-    public String getMsisdn() {
-        return msisdn;
-    }
-
-    public void setMsisdn(String msisdn) {
-        this.msisdn = msisdn;
-    }
 
     @Override
     public String toString() {
         return "VehicleProfileInfo{" +
                 "id='" + id + '\'' +
                 ", vin='" + vin + '\'' +
-                ", iccid='" + iccid + '\'' +
-                ", msisdn='" + msisdn + '\'' +
                 '}';
     }
 }
